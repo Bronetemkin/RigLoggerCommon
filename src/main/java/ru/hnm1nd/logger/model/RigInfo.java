@@ -12,6 +12,8 @@ public class RigInfo implements Comparable<RigInfo> {
     private double speed;
     private String speedUnit;
 
+    public RigInfo() {}
+
     public String getName() {
         return name;
     }

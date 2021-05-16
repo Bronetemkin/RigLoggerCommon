@@ -6,8 +6,10 @@ public class GPUInfo {
     private String gpuId;
     private FanInfo fanInfo;
     private TemperatureInfo temperatureInfo;
-    private double speed;
+    private Double speed;
     private String speedUnit;
+
+    public GPUInfo() {}
 
     public GPUInfo (String gpuName, FanInfo fanInfo, TemperatureInfo temperatureInfo, String gpuId) {
         this.gpuName = gpuName;
@@ -32,7 +34,7 @@ public class GPUInfo {
         return temperatureInfo;
     }
 
-    public double getSpeed() {
+    public Double getSpeed() {
         return speed;
     }
 
@@ -40,7 +42,7 @@ public class GPUInfo {
         return speedUnit;
     }
 
-    public void setSpeed(double speed, String speedUnit) {
+    public void setSpeed(Double speed, String speedUnit) {
         this.speed = speed;
         this.speedUnit = speedUnit;
     }
