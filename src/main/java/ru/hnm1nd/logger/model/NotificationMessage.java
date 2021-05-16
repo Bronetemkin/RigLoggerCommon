@@ -8,6 +8,8 @@ public class NotificationMessage {
     private RigEventType rigEventType;
     private String msg;
 
+    public NotificationMessage() {}
+
     public NotificationMessage(RigInfo rigInfo, RigEventType rigEventType, String msg) {
         this.rigInfo = rigInfo;
         this.rigEventType = rigEventType;
