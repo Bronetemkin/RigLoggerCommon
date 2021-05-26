@@ -26,6 +26,10 @@ public class NotificationMessage {
     }
 
     public void setEventData(String eventData) {
+        this.eventData = eventData;
+    }
+
+    public void setEventData0(String eventData) {
         this.eventData = eventCode + ":" + eventData.replaceAll("\\s", "");
     }
 
