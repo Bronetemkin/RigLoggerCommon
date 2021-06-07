@@ -2,34 +2,34 @@ package ru.hnm1nd.logger.model;
 
 public class TemperatureInfo {
 
-    private Double mainTemperature;
-    private Double[] temperatures;
+    private double mainTemperature;
+    private double[] temperatures;
 
     public TemperatureInfo() {}
 
     public TemperatureInfo(double mainTemperature) {
         this.mainTemperature = mainTemperature;
-        this.temperatures = new Double[0];
+        this.temperatures = new double[0];
     }
 
-    public TemperatureInfo(Double mainTemperature, Double[] temperatures) {
+    public TemperatureInfo(double mainTemperature, double[] temperatures) {
         this.mainTemperature = mainTemperature;
         this.temperatures = temperatures;
     }
 
-    public void setTemperatures(Double[] temperatures) {
+    public void setTemperatures(double[] temperatures) {
         this.temperatures = temperatures;
     }
 
-    public void setMainTemperature(Double mainTemperature) {
+    public void setMainTemperature(double mainTemperature) {
         this.mainTemperature = mainTemperature;
     }
 
-    public Double getMainTemperature() {
+    public double getMainTemperature() {
         return mainTemperature;
     }
 
-    public Double[] getTemperatures() {
+    public double[] getTemperatures() {
         return temperatures;
     }
 
