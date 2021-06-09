@@ -47,4 +47,19 @@ public class GPUInfo {
         this.speedUnit = speedUnit;
     }
 
+    public void setGpuName(String gpuName) {
+        this.gpuName = gpuName;
+    }
+
+    public void setGpuId(String gpuId) {
+        this.gpuId = gpuId;
+    }
+
+    public void setFanInfo(FanInfo fanInfo) {
+        this.fanInfo = fanInfo;
+    }
+
+    public void setTemperatureInfo(TemperatureInfo temperatureInfo) {
+        this.temperatureInfo = temperatureInfo;
+    }
 }
