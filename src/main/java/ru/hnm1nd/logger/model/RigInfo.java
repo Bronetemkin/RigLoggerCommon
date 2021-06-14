@@ -7,6 +7,7 @@ public class RigInfo implements Comparable<RigInfo> {
     private String subStatus = "";
     private String statusDescription = "";
     private String name = "";
+    private String id = "";
     private GPUInfo[] gpus = new GPUInfo[0];
     private long timestamp;
     private double speed;
@@ -86,6 +87,14 @@ public class RigInfo implements Comparable<RigInfo> {
     public void setSpeed(double speed, String speedUnit) {
         this.speed = speed;
         this.speedUnit = speedUnit;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     @Override
