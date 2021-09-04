@@ -1,6 +1,6 @@
 package ru.hnm1nd.logger.model;
 
-public class GPUInfo {
+public class GPUInfo implements Cloneable {
 
     private String gpuName;
     private String gpuId;
@@ -61,5 +61,14 @@ public class GPUInfo {
 
     public void setTemperatureInfo(TemperatureInfo temperatureInfo) {
         this.temperatureInfo = temperatureInfo;
+    }
+
+    @Override
+    public GPUInfo clone() {
+        try {
+            return (GPUInfo) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 }

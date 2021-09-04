@@ -1,6 +1,6 @@
 package ru.hnm1nd.logger.model;
 
-public class FanInfo {
+public class FanInfo implements Cloneable {
 
     private int[] fanSpeed;
     private double[] fanRPM;
@@ -26,5 +26,14 @@ public class FanInfo {
 
     private void setFanRPM(double[] fanRPM) {
         this.fanRPM = fanRPM;
+    }
+
+    @Override
+    public FanInfo clone() {
+        try {
+            return (FanInfo) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 }

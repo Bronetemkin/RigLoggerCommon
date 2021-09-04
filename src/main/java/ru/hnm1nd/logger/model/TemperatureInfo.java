@@ -1,6 +1,6 @@
 package ru.hnm1nd.logger.model;
 
-public class TemperatureInfo {
+public class TemperatureInfo implements Cloneable {
 
     private double mainTemperature;
     private double[] temperatures;
@@ -31,6 +31,15 @@ public class TemperatureInfo {
 
     public double[] getTemperatures() {
         return temperatures;
+    }
+
+    @Override
+    public TemperatureInfo clone() {
+        try {
+            return (TemperatureInfo) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 
 }

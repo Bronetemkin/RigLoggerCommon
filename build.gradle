@@ -12,8 +12,9 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testImplementation 'com.google.code.gson:gson:2.8.6'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    implementation 'com.github.Bronetemkin:CommonUtils:0.1'
+    implementation 'com.github.Bronetemkin:CommonUtils:53fc45b3a1'
 }
 
 jar {

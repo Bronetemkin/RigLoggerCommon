@@ -1,11 +1,17 @@
 package ru.hnm1nd.logger.connection;
 
+import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
 import ru.hnm1nd.base.connection.DataAccessAPI;
+import ru.hnm1nd.logger.model.FanInfo;
+import ru.hnm1nd.logger.model.GPUInfo;
+import ru.hnm1nd.logger.model.RigInfo;
+import ru.hnm1nd.logger.model.TemperatureInfo;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 public class InMemoryDataAccessAPITest {
 
@@ -59,6 +65,25 @@ public class InMemoryDataAccessAPITest {
             }
             System.out.println();
         }
+    }
+
+    @Test
+    public void testClone() {
+        RigInfo info = new RigInfo();
+        GPUInfo gpuInfo = new GPUInfo();
+        gpuInfo.setFanInfo(new FanInfo(new double[]{1}, new int[]{1}));
+        gpuInfo.setTemperatureInfo(new TemperatureInfo(0));
+        GPUInfo[] gpuInfos = new GPUInfo[]{gpuInfo};
+        info.setGpus(gpuInfos);
+        info.setId(UUID.randomUUID().toString());
+        info.setStatus("KEK");
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(info));
+        System.out.println(info.toString());
+        RigInfo cln = info.clone();
+        System.out.println(gson.toJson(cln));
+        System.out.println(cln.toString());
+        System.out.println(info.toString());
     }
 
 }

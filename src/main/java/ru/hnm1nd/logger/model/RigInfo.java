@@ -1,6 +1,6 @@
 package ru.hnm1nd.logger.model;
 
-public class RigInfo implements Comparable<RigInfo> {
+public class RigInfo implements Comparable<RigInfo>, Cloneable {
 
     private String msgId;
     private String status = "";
@@ -107,5 +107,14 @@ public class RigInfo implements Comparable<RigInfo> {
             arg1tm = 0;
         }
         return (int) (arg0tm - arg1tm);
+    }
+
+    @Override
+    public RigInfo clone() {
+        try {
+            return (RigInfo) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 }
